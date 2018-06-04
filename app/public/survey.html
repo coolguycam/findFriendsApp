@@ -38,11 +38,11 @@
                     <br>
                     <div class="col-md-4">
                         <select class="form-control" id="question01" name="scores[0]">
-                            <option>1 </option>
+                            <option>1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
-                            <option>5 </option>
+                            <option>5</option>
                         </select>
                     </div>
                 </fieldset>
@@ -54,11 +54,11 @@
                     <br>
                     <div class="col-md-4">
                         <select class="form-control" id="question02" name="scores[1]">
-                            <option>1 </option>
+                            <option>1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
-                            <option>5 </option>
+                            <option>5</option>
                         </select>
                     </div>
                 </fieldset>
@@ -197,7 +197,6 @@
         </div>
         <hr>
         <a href="/api/friends">API Friends List</a> |
-        <a href="https://github.com/NolanKern/Friend-Finder" target="_blank">GitHub Repo</a>
     </div>
 
 
@@ -211,8 +210,6 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="bestFriendName"></h2>
-                    <img id="bestFriendImg" src="../data/nof.jpg"
-                        onError="this.src='../data/nof.jpg'" width=500px alt="Best Friend">
                 </div>
             </div>
         </div>
@@ -235,9 +232,10 @@
             }
             var currentURL = window.location.origin;
             $.post(currentURL + '/api/friends', userInput, function (data) {
-                $("#bestFriendName").text(data.name);
-                $("#bestFriendImg").attr("src", data.photo);
-                $("#bestFriendModal").modal("show");
+                //$("#bestFriendName").text(data.name);
+               // $("#bestFriendImg").attr("src", data.photo);
+               // $("#bestFriendModal").modal("show");
+               console.log(data)
             });
             return false;
         });

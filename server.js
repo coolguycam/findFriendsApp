@@ -1,6 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var html = require('./app/routing/htmlRoutes');
+var api = require('./app/routing/apiRoutes');
 
 var app = express();
 
@@ -15,8 +17,8 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static("app"));
 
 // direction logic for routing js files
-require("./app/routing/apiRoutes.js");
-require("./app/routing/htmlRoutes.js");
+app.use('/api', api);
+app.use('/', html)
 
 // listen for local host
 app.listen(PORT, function () {
