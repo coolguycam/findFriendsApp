@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="public/style.css">
+   
 </head>
 
 <body>
@@ -232,9 +232,9 @@
             }
             var currentURL = window.location.origin;
             $.post(currentURL + '/api/friends', userInput, function (data) {
-                //$("#bestFriendName").text(data.name);
-               // $("#bestFriendImg").attr("src", data.photo);
-               // $("#bestFriendModal").modal("show");
+                $("#bestFriendName").text(data.name);
+                $("#bestFriendImg").attr("src", data.photo);
+                $("#bestFriendModal").modal("show");
                console.log(data)
             });
             return false;
