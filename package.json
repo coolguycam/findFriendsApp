@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/coolguycam/findFriendsApp/issues"
   },
-  "homepage": "https://github.com/coolguycam/findFriendsApp#readme"
+  "homepage": "https://github.com/coolguycam/findFriendsApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {}
 }
